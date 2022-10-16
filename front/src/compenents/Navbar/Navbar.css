@@ -1,0 +1,30 @@
+.navContainer{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.positionMenu{
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    padding: 0 0 0 2%;
+    margin: 0;
+    width: 90%;
+    font-size: 1.5rem;
+}
+
+.positionLogo{
+    display: flex;
+    align-items: center;
+}
+
+.textLogo{
+    padding-left: 5%;
+    color: #E60000;
+}
+
+.logoSportSee{
+    width: 4vw;
+}

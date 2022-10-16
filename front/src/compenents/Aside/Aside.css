@@ -1,0 +1,42 @@
+.asideContainer{
+    display: inline-block;
+    background: black;
+    height: 90vh;
+    width: 8.125vw;
+}
+
+.menuAside {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.menuAside li {
+    padding: 0.4rem;
+}
+
+.positionText{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+}
+
+.verticalText{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-size: 0.75rem;
+    color: white;
+}
+
+.imgAside{
+    width: 4.444vw;
+}
