@@ -1,0 +1,30 @@
+.legendBarCharts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.black {
+    background-color: #282D30;
+}
+
+.red {
+    background-color: #E60000;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.flexCenter{
+    display: flex;
+    align-items: center;
+}

@@ -5,6 +5,7 @@ import './LineCharts.css';
 
 const LineCharts = () => {
     return (
+        
         <ResponsiveContainer width="100%" height="100%">
         <LineChart
           width={500}

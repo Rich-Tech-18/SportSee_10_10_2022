@@ -1,4 +1,8 @@
 .containerDashboard{
-    display: inline-block;
-    position: absolute;
+    display: grid;
+    grid-template: 
+    "aside title title title title"
+    "aside barcharts barcharts barcharts nutriments"
+    "aside linecharts radarcharts radialbarcharts nutriments";
+    grid-template-columns: 8.25vw 1fr 1fr 1fr 1fr;
 }

@@ -1,0 +1,4 @@
+.gridTitle {
+    display: grid;
+    grid-area: title;
+}

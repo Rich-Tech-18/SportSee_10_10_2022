@@ -1,20 +1,25 @@
 .asideContainer{
-    display: inline-block;
+    display: grid;
+    grid-area: aside;
     background: black;
     height: 90vh;
-    width: 8.125vw;
+    /* width: 8.125vw; */
 }
 
 .menuAside {
     list-style: none;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center;
     position: relative;
     top: 50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
 }
 
 .menuAside li {
@@ -25,7 +30,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: 50%;
+    /* top: 50%; */
     -ms-transform: translateY(50%);
     transform: translateY(50%);
 }

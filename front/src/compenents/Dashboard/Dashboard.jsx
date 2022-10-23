@@ -1,8 +1,8 @@
 import React from 'react';
 import HelloFirstName from '../HelloFirstName/HelloFirstName';
-import TextTitle from '../TextTitle/TextTitile';
 import ContainnerStatsNutriments from '../ContainnerStatsNutriments/ContainnerStatsNutriments';
-import BarCharts from '../BarCharts/BarCharts';
+import ContainerBarChats from '../ContainerBarCharts/ContainerBarCharts';
+import Aside from '../Aside/Aside';
 import './Dashboard.css';
 
 
@@ -24,10 +24,11 @@ const Dashboard = () => {
 
     return(
         <section className="containerDashboard">
+            <Aside />
             <HelloFirstName/>
-            <TextTitle/>
+            <ContainerBarChats />
             <ContainnerStatsNutriments />
-            <BarCharts />
+            
         </section>
     )
 }

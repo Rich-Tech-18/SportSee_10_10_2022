@@ -4,14 +4,12 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './index.css';
 import Header from './compenents/Header/Header';
 import Dashboard from './compenents/Dashboard/Dashboard';
-import Aside from './compenents/Aside/Aside';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <Header />
-    <Aside />
       <Routes>
         <Route path="/:idUser" element={<Dashboard />}></Route>
     </Routes>

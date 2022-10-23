@@ -1,0 +1,4 @@
+.gridBarCharts{
+    display: grid;
+    grid-area: barcharts;
+}

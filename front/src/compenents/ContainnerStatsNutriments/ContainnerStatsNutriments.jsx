@@ -55,12 +55,12 @@ const ContainnerStatsNutriments = () => {
     
 
     return(
-        <div>
-            <StatsNutriments image={calorie} type={caloriesNumber > 1 ? "Calories" : "Calorie"} number={caloriesNumber}/>
-            <StatsNutriments image={protein} type={caloriesNumber > 1 ? "Proteines" : "Proteine"} number={proteinNumber}/>
-            <StatsNutriments image={carbohydrate} type={caloriesNumber > 1 ? "Glucides" : "Glucide"} number={carbohydrateNumber}/>
-            <StatsNutriments image={lipid} type={caloriesNumber > 1 ? "Lipides" : "Lipide"} number={lipidNumber}/>
-        </div>
+        <ul className="gridNutriments">
+            <li><StatsNutriments image={calorie} type={caloriesNumber > 1 ? "Calories" : "Calorie"} number={caloriesNumber}/></li>
+            <li><StatsNutriments image={protein} type={caloriesNumber > 1 ? "Proteines" : "Proteine"} number={proteinNumber}/></li>
+            <li><StatsNutriments image={carbohydrate} type={caloriesNumber > 1 ? "Glucides" : "Glucide"} number={carbohydrateNumber}/></li>
+            <li><StatsNutriments image={lipid} type={caloriesNumber > 1 ? "Lipides" : "Lipide"} number={lipidNumber}/></li>
+        </ul>
     )
 }
 
