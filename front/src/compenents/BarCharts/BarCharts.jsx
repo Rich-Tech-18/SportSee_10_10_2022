@@ -25,10 +25,12 @@ const BarCharts = () => {
 
       
         <ResponsiveContainer width="100%" height="100%">
+          
         <BarChart
           width={500}
           height={300}
           data={activity[0]}
+          reverseStackOrder={false}
           margin={{
             top: 5,
             right: 30,
@@ -38,9 +40,9 @@ const BarCharts = () => {
         >
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="day" />
-          <YAxis />
+          <YAxis orientation='right'/>
           <Tooltip />
-          <Legend />
+          
           <Bar dataKey="kilogram" fill="#8884d8" />
           <Bar dataKey="calories" fill="#82ca9d" />
         </BarChart>
