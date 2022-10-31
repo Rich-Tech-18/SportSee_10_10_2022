@@ -35,6 +35,25 @@ export const getObjectifScore = async (id) => {
 }
 
 
+
+/**
+ * Fetch the information data of a user from API
+ * @param {Number} id
+ * @returns Object
+ */
+
+ export const getInfo = async (id) => {
+    let info = [];
+    await axios.get(`http://localhost:3000/user/${id}`)
+    .then(response => {
+        info.push(response.data.data);
+    }).catch((error) => {
+        console.log(error);
+    })
+    return info;
+}
+
+
 /**
  * Fetch the calories count of a user from API
  * @param {Number} id
@@ -120,5 +139,39 @@ export const getObjectifScore = async (id) => {
     return getActivity;
 }
 
+
+/**
+ * Fetch the activity of a user from API
+ * @param {Number} id
+ * @returns Object
+ */
+
+ export const getAverageSessions = async (id) => {
+    let getAverageSessions = [];
+    await axios.get(`http://localhost:3000/user/${id}/average-sessions`)
+    .then(response => {
+        getAverageSessions.push(response.data.data.sessions);
+    }).catch((error) => {
+        console.log(error);
+    })
+    return getAverageSessions;
+}
+
+/**
+ * Fetch the activity of a user from API
+ * @param {Number} id
+ * @returns Object
+ */
+
+ export const getPerformance = async (id) => {
+    let getPerformance = [];
+    await axios.get(`http://localhost:3000/user/${id}/performance`)
+    .then(response => {
+        getPerformance.push(response.data.data);
+    }).catch((error) => {
+        console.log(error);
+    })
+    return getPerformance;
+}
 
 

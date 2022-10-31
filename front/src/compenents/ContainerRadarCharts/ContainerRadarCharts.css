@@ -1,0 +1,4 @@
+.gridRadarCharts{
+    display: grid;
+    grid-area: radarcharts;
+}

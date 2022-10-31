@@ -19,25 +19,32 @@ const BarCharts = () => {
     getActivityData(id.idUser);
   }, [id.idUser])
 
-  console.log(activity[0])
+  
+
     return (
       <div className='containnerCharts'>
 
       
-        <ResponsiveContainer>
+        <ResponsiveContainer width="100%" height={270}>
           
         <BarChart
+          width={250}
+          height={280}
           data={activity[0]}
-          reverseStackOrder={true}
+          reverseStackOrder={false}
           
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis />
-          <YAxis orientation='right' type="number" dataKey="kilogram" domain={["kilogram - 5", 'kilograme + 5']}/>
+          <CartesianGrid vertical={0} strokeDasharray="3 3" />
+          <XAxis interval="number"/>
+          {/* <YAxis orientation='right' interval={"preserveEnd"} dataKey="kilogram" domain={0, 300}/>
+          <YAxis orientation='right' interval={"preserveEnd"} dataKey="kilogram" domain={0, 300}/> */}
+          <YAxis orientation="right" dataKey="kilogram" domain={['dataMin - 1', 'dataMax + 1']} interval="number" tickCount={4} allowDecimals={0} tickMargin={20} axisLine={0} tickLine={0} />
+          <YAxis hide yAxisId="left" orientation="left" dataKey="calories"/>
           <Tooltip />
           
-          <Bar dataKey="kilogram" fill="#E60000" barSize={10} radius={[10, 10, 0, 0]}/>
-          <Bar dataKey="calories" fill="#282D30" barSize={10} radius={[10, 10, 0, 0]}/>
+          <Bar dataKey="kilogram" fill="#282D30" barSize={7} radius={[10, 10, 0, 0]}/>
+          <Bar dataKey="calories" fill="#E60000" barSize={7} yAxisId="left" radius={[10, 10, 0, 0]}/>
+         
         </BarChart>
       </ResponsiveContainer>
       </div>

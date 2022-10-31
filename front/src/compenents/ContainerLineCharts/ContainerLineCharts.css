@@ -1,0 +1,4 @@
+.gridLineCharts{
+    display: grid;
+    grid-area: linecharts;
+}
