@@ -1,4 +1,11 @@
 .gridBarCharts{
     display: grid;
     grid-area: barcharts;
+    margin: 0 2vw 2vh 3vw;
+    background-color: #FBFBFB;
+    border-radius: 3%;
+}
+
+.paddingBarCharts{
+    padding: 0 2vw;
 }

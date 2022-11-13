@@ -1,4 +1,27 @@
 .containnerNutriment{
     display: flex;
     align-items: center;
+    background-color: #FBFBFB;
+    border-radius: 3%;
+    width: 95%;
+}
+
+.containnerNutriment img {
+    padding: 0 2vw;
+}
+
+
+.textNutriments{
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    margin-bottom: 0;
+}
+
+.textNutrimentsType{
+    font-size: 0.775rem;
+    font-weight: 700;
+    line-height: 1.8rem;
+    margin-top: 0;
+    color: #74798C;
 }

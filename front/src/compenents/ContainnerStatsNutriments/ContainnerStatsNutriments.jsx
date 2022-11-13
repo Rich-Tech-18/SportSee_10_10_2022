@@ -6,6 +6,7 @@ import calorie from "../../assets/calorie.svg";
 import protein from "../../assets/protein.svg";
 import carbohydrate from "../../assets/carbohydrate.svg";
 import lipid from "../../assets/lipid.svg";
+import { getNutriments } from "../../datas/classesData";
 import "./ContainnerStatsNutriments.css";
 
 
@@ -52,14 +53,19 @@ const ContainnerStatsNutriments = () => {
         
     }, [id.idUser])
 
+    const calorieFormat = new getNutriments(caloriesNumber);
+    const proteinFormat = new getNutriments(proteinNumber);
+    const carbohydrateFormat = new getNutriments(carbohydrateNumber);
+    const lipideFormat = new getNutriments(lipidNumber);
+
     
 
     return(
         <ul className="gridNutriments">
-            <li><StatsNutriments image={calorie} type={caloriesNumber > 1 ? "Calories" : "Calorie"} number={caloriesNumber}/></li>
-            <li><StatsNutriments image={protein} type={caloriesNumber > 1 ? "Proteines" : "Proteine"} number={proteinNumber}/></li>
-            <li><StatsNutriments image={carbohydrate} type={caloriesNumber > 1 ? "Glucides" : "Glucide"} number={carbohydrateNumber}/></li>
-            <li><StatsNutriments image={lipid} type={caloriesNumber > 1 ? "Lipides" : "Lipide"} number={lipidNumber}/></li>
+            <li><StatsNutriments image={calorie} type={caloriesNumber > 1 ? "Calories" : "Calorie"} number={calorieFormat.getNutriments() +"kCal"}/></li>
+            <li><StatsNutriments image={protein} type={caloriesNumber > 1 ? "Proteines" : "Proteine"} number={proteinFormat.getNutriments() + "g"}/></li>
+            <li><StatsNutriments image={carbohydrate} type={caloriesNumber > 1 ? "Glucides" : "Glucide"} number={carbohydrateFormat.getNutriments() + "g"}/></li>
+            <li><StatsNutriments image={lipid} type={caloriesNumber > 1 ? "Lipides" : "Lipide"} number={lipideFormat.getNutriments() + "g"}/></li>
         </ul>
     )
 }

@@ -1,4 +1,39 @@
 .gridRadialCharts{
     display: grid;
     grid-area: radialbarcharts;
+    background-color: #FBFBFB;
+    width: 14.125rem;
+    height: 14.438rem;
+    border-radius: 3%;
+    position: relative;
+}
+
+.textScore{
+    font-weight: 600;
+    font-size: 0.938rem;
+    line-height: 24px;
+    margin: 1.2vh 4vw 0;
+    position: relative;
+}
+
+.pourcent{
+    position: absolute;
+    right: 50%;
+    top: 35%;
+    transform: translate(60%, -40%);
+    font-weight: 700;
+    font-size: 1.45rem;
+    line-height: 26px;
+}
+
+.textPourcent{
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(75%, -13%);
+    width: 40%;
+    font-weight: 700;
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    color: #74798C;
 }

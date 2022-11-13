@@ -6,8 +6,8 @@ const StatsNutriments = (props) => {
         <div className="containnerNutriment">
             <img src={props.image} alt={props.type}></img>
             <div>
-                <p>{props.number}</p>
-                <p>{props.type}</p>
+                <p className="textNutriments">{props.number}</p>
+                <p className="textNutrimentsType">{props.type}</p>
             </div>
         </div>
     )

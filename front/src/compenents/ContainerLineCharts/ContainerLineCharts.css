@@ -1,4 +1,17 @@
 .gridLineCharts{
     display: grid;
     grid-area: linecharts;
+    background-color: #FF0000;
+    margin: 0 0 0 3vw;
+    width: 14.125rem;
+    height: 14.438rem;
+    padding: 0 0.2vw;
+    border-radius: 3%;
+}
+
+.textLineChart{
+    color: #FFFFFF;
+    width: 65%;
+    margin: 2vw 2vw;
+    opacity: 0.7;
 }

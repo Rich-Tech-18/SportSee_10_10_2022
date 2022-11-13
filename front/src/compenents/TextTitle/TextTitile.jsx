@@ -18,7 +18,7 @@ const TextTitle = () => {
         
     }, [id.idUser])
     return (
-        <div>{score > 0.15 ? "Félicitation ! Vous avez explosé vos objectifs hier 👏" : "Bravo ! Vous êtes sur le bon chemin 👏"}</div>
+        <div className="textTitle">{score > 0.15 ? "Félicitation ! Vous avez explosé vos objectifs hier 👏" : "Bravo ! Vous êtes sur le bon chemin 👏"}</div>
     )
 }
 

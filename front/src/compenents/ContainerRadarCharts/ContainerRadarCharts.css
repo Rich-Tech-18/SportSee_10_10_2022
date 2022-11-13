@@ -1,4 +1,9 @@
 .gridRadarCharts{
     display: grid;
     grid-area: radarcharts;
+    background-color: #282D30;
+    width: 14.125rem;
+    height: 14.438rem;
+    border-radius: 3%;
+    margin: 0 0.5vw;
 }

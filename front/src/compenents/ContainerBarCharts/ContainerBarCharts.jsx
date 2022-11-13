@@ -6,8 +6,8 @@ import './ContainerBarCharts.css';
 const ContainerBarChats = () => {
     return (
         <div className="gridBarCharts">
-            <div><LegendBarCharts /></div>
-            <div><BarCharts /></div>
+            <div className="paddingBarCharts"><LegendBarCharts /></div>
+            <div className="paddingBarCharts"><BarCharts /></div>
         </div>
     )
 }

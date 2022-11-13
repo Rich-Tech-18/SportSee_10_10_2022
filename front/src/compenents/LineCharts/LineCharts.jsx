@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
 import { getAverageSessions } from '../../api/api';
+import {dataSort} from '../../datas/classesData';
 import './LineCharts.css';
 
 
@@ -18,27 +19,38 @@ const LineCharts = () => {
         getAverageSessionData(id.idUser);
       }, [id.idUser])
 
+      const averageSort = new dataSort(average);
+
 
     return (
       
         
         <ResponsiveContainer width="100%" height="100%">
         <LineChart
-          width={500}
+          width={100}
           height={300}
-          data={average[0]}
-          margin={{
-            top: 5,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
+          data={averageSort.lineCharts()}
+          // margin={{
+          //   top: 5,
+          //   right: 0,
+          //   left: 0,
+          //   bottom: 5,
+          // }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="day" />
-          <YAxis />
-          <Tooltip />
-          <Line type="monotone" dataKey="sessionLength" stroke="#82ca9d" />
+          {/* <CartesianGrid strokeDasharray="3 3" /> */}
+          <XAxis dataKey="day" axisLine={false} tickLine={false} stroke="#FFFFFF" opacity={0.7}/>
+          <YAxis hide={true}/>
+          <Tooltip 
+          contentStyle={{ backgroundColor: "white" }}
+          itemStyle={{ color: "black" }}
+          formatter={function (value, name) {
+            return [value + name];
+          }}
+          labelFormatter={function (value) {
+            return ``;
+          }}
+          />
+          <Line type="monotone" dot={false} dataKey="min" stroke="#FFFFFF" />
         </LineChart>
       </ResponsiveContainer>
     )
