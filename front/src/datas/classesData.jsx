@@ -1,9 +1,24 @@
+/**
+ * A class representing the sort data for all type of chart
+ *
+ * @property {Object} data - The data fetch from the API
+ */
+
 export class dataSort {
     constructor(data){
       this.data = data
     }
 
+  /**
+ * Function that returns a array for the bar Charts
+ *
+ * @return {Object} Return the object for sorted barchart
+ */
+
     barCharts(){
+      /**
+       * @type {Array<object>}
+       */
         let element = [];
         this.data.map(elem => {
           return elem.map((el, index) => {
@@ -20,7 +35,16 @@ export class dataSort {
         return element;
     }
 
+/**
+ * Function that returns a array for the line Charts
+ *
+ * @return {Object} Return the object for sorted lineCharts
+ */
+
     lineCharts(){
+      /**
+       * @type {Array<object>}
+       */
         let arr = [];
         const sessions = this.data.map(elem => elem.map(el => el.sessionLength));
         if (this.data.length === 0){
@@ -67,7 +91,17 @@ export class dataSort {
         return arr;
     }
 
+
+/**
+ * Function that returns a array for the radar Charts
+ *
+ * @return {Object} Return the object for sorted radarCharts
+ */
+
     radarCharts(){
+      /**
+       * @type {Array<object>}
+       */
     let items = []
        if (this.data.length === 0){
         items = [
@@ -109,8 +143,17 @@ export class dataSort {
         
         return items;
     }
+
+/**
+ * Function that returns a array for the radial barCharts
+ *
+ * @return {Object} Return the object for sorted radialBarcharts
+ */
   
     radialBarCharts(){
+      /**
+       * @type {Array<object>}
+       */
       let arr = [];
       this.data.forEach(element => {
         if(element.todayScore === undefined){
@@ -142,10 +185,21 @@ export class dataSort {
   }
 
 
-  export class getUserName {
+/**
+ * A class representing the information of the user
+ *
+ * @property {Object} name - The data fetch from the API
+ */
+
+  export class user {
     constructor(name){
       this.name = name
     }
+/**
+ * Function that returns the user's name
+ *
+ * @return {Object} Return the user's name in a array
+ */
 
     getName(){
       return this.name;
@@ -154,14 +208,24 @@ export class dataSort {
     
   }
 
+/**
+ * A class representing the number for the nutriment selected
+ *
+ * @property {Object} nutriments - The data fetch from the API
+ */
 
-
-  export class getNutriments {
+  export class dataNutriments {
     constructor(nutriments){
       this.nutriments = nutriments
     }
 
-    getNutriments(){
+  /**
+ * Function that returns the nutriment selected
+ *
+ * @return {string} Return the number of nutriment in a string format
+ */
+
+    getDataNutriments(){
       return new Intl.NumberFormat("en-IN").format(this.nutriments)
     }
   }

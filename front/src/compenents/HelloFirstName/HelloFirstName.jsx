@@ -2,7 +2,7 @@ import {getFirstName} from '../../api/api';
 import { useParams } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 import TextTitle from '../TextTitle/TextTitile';
-import { getUserName } from '../../datas/classesData';
+import { user } from '../../datas/classesData';
 import './HelloFirstName.css';
 
 
@@ -21,7 +21,7 @@ const HelloFirstName = () => {
         
     }, [id.idUser])
 
-    const userName = new getUserName(name)
+    const userName = new user(name)
 
     return (
         <div className="gridTitle">

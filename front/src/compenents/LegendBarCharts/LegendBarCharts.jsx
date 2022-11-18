@@ -1,5 +1,14 @@
 import './LegendBarCharts.css';
 
+/**
+ * Component who show the Legends for the Barcharts components.
+ *
+ * @component
+ * 
+ */
+
+
+
 const LegendBarCharts = () => {
     return (
         <div className='legendBarCharts'>

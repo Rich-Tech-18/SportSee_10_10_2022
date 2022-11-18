@@ -7,23 +7,23 @@ import "./BarCharts.css";
 
 
 
-const BarCharts = () => {
-  const id = useParams();
+const BarCharts = (props) => {
+  // const id = useParams();
   const [activity, setActivity] = useState([]);
 
 
-  useEffect(() => {
-    const getActivityData = async (id) => {
-        const activityData = await getActivity(id);
-        setActivity(activityData);
-    }
-    getActivityData(id.idUser);
-  }, [id.idUser])
+  // useEffect(() => {
+  //   const getActivityData = async (id) => {
+  //       const activityData = await getActivity(id);
+  //       setActivity(activityData);
+  //   }
+  //   getActivityData(id.idUser);
+  // }, [id.idUser])
 
-  const activitySort = new dataSort(activity);
+  // const activitySort = new dataSort(activity);
  
 
-  console.log(activitySort.barCharts())
+  // console.log(activitySort.barCharts())
 
     return (
       <div className='containnerCharts'>
@@ -34,7 +34,7 @@ const BarCharts = () => {
         <BarChart
           width={250}
           height={280}
-          data={activitySort.barCharts()}
+          data={props.data}
           reverseStackOrder={false}
           
         >
