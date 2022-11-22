@@ -5,6 +5,15 @@ import { dataSort } from '../../datas/classesData';
 import './ContainerRadarCharts.css';
 
 
+/**
+ * Component for showing a container for the RadarCharts in the Dashboard component.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 const ContainerRadarCharts = () => {
     const idUser = useIdParamUrl();
     const dataUser = useData(idUser, getPerformance, dataSort);

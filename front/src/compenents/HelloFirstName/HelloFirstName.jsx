@@ -1,31 +1,27 @@
 import {getFirstName} from '../../api/api';
-import { useParams } from 'react-router-dom';
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import TextTitle from '../TextTitle/TextTitile';
 import { user } from '../../datas/classesData';
+import { useIdParamUrl, useData } from '../../datas/stateData';
 import './HelloFirstName.css';
 
 
+/**
+ * Component for showing the First name of the user.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 const HelloFirstName = () => {
-    const id = useParams();
-    const [name, setFirstName] = useState([]);
-    
-    
-
-    useEffect(() => {
-        const getFirstNameData = async (id) => {
-            const firstNameData = await getFirstName(id);
-            setFirstName(firstNameData);
-        }
-        getFirstNameData(id.idUser)
-        
-    }, [id.idUser])
-
-    const userName = new user(name)
+    const idUser = useIdParamUrl();
+    const nameUser = useData(idUser, getFirstName, user);
 
     return (
         <div className="gridTitle">
-            <h1>Bonjour <span className="colorName">{userName.getName()}</span></h1>
+            <h1>Bonjour <span className="colorName">{nameUser.getName()}</span></h1>
             <TextTitle />
         </div>
         )

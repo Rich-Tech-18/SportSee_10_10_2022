@@ -5,10 +5,18 @@ import { dataSort } from '../../datas/classesData';
 import './ContainerRadialBarCharts.css';
 
 
+/**
+ * Component for showing a container for the RadialBarCharts in the Dashboard component.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 const ContainerRadialBarCharts = () => {
     const idUser = useIdParamUrl();
     const dataUser = useData(idUser, getInfo, dataSort)
-
     return (
         <div className="gridRadialCharts">
             <p className="textScore">Score</p>

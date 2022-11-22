@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./StatsNutriments.css";
 
 
@@ -5,10 +6,6 @@ import "./StatsNutriments.css";
  * Component for showing the sentence if the goal is successful.
  *
  * @component
- * @exemple
- * const type = calorie
- * const number = 2000
- * const image = test.jpg
  * 
  * @return HTML element with property of stat nutriments
  * 
@@ -31,5 +28,11 @@ const StatsNutriments = (props) => {
         </div>
     )
 }
+
+StatsNutriments.propTypes = {
+    image: PropTypes.string,
+    type: PropTypes.string,
+    number: PropTypes.string
+  }
 
 export default StatsNutriments;

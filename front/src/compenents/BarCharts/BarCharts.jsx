@@ -1,30 +1,20 @@
-import { getActivity } from '../../api/api';
-import { useParams } from "react-router"; 
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import {dataSort} from '../../datas/classesData';
+import PropTypes from "prop-types"
 import "./BarCharts.css";
 
 
 
+/**
+* A array who show kilograms and calorie per week activity Bar chart component.
+* @param {Object} data
+* @external Recharts library
+* @see https://recharts.org/en-US/api/BarChart
+* @returns A bar chart React Element.
+*/
+
+
 const BarCharts = (props) => {
-  // const id = useParams();
-  const [activity, setActivity] = useState([]);
-
-
-  // useEffect(() => {
-  //   const getActivityData = async (id) => {
-  //       const activityData = await getActivity(id);
-  //       setActivity(activityData);
-  //   }
-  //   getActivityData(id.idUser);
-  // }, [id.idUser])
-
-  // const activitySort = new dataSort(activity);
- 
-
-  // console.log(activitySort.barCharts())
-
     return (
       <div className='containnerCharts'>
 
@@ -40,8 +30,6 @@ const BarCharts = (props) => {
         >
           <CartesianGrid vertical={0} strokeDasharray="3 3" />
           <XAxis dataKey="name" interval="number" axisLine={false} tickLine={false}/>
-          {/* <YAxis orientation='right' interval={"preserveEnd"} dataKey="kilogram" domain={0, 300}/>
-          <YAxis orientation='right' interval={"preserveEnd"} dataKey="kilogram" domain={0, 300}/> */}
           <YAxis orientation="right" dataKey="kg" domain={['dataMin - 1', 'dataMax + 1']} interval="number" tickCount={4} allowDecimals={false} tickMargin={20} axisLine={false} tickLine={false} />
           <YAxis hide yAxisId="caloriesAxis" orientation="left" dataKey="Kcal"/>
           <Tooltip 
@@ -63,6 +51,16 @@ const BarCharts = (props) => {
       </ResponsiveContainer>
       </div>
     )
+}
+
+BarCharts.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+    day : PropTypes.string,
+    kilogram : PropTypes.number,
+    calories: PropTypes.number
+  })
+  )
 }
 
 

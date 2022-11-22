@@ -46,7 +46,7 @@ export class dataSort {
        * @type {Array<object>}
        */
         let arr = [];
-        const sessions = this.data.map(elem => elem.map(el => el.sessionLength));
+        
         if (this.data.length === 0){
             arr = [
                 {
@@ -56,6 +56,7 @@ export class dataSort {
                 
             ];
         }else{
+          const sessions = this.data.map(elem => elem.map(el => el.sessionLength));
             arr = [
             {
                 day : "L",
@@ -102,14 +103,34 @@ export class dataSort {
       /**
        * @type {Array<object>}
        */
-    let items = []
+    let items = [];
        if (this.data.length === 0){
         items = [
 
-            {
-              subject : "",
-              performance : 0
-            }
+          {
+            subject : "Intensité",
+            performance : 0
+          },
+          {
+            subject : "Vitesse",
+            performance : 0
+          },
+          {
+            subject : "Force",
+            performance : 0
+          },
+          {
+            subject : "Endurance",
+            performance : 0
+          },
+          {
+            subject : "Energie",
+            performance : 0
+          },
+          {
+            subject : "Cardio",
+            performance : 0
+          }
           ];
        }else {
         items = [

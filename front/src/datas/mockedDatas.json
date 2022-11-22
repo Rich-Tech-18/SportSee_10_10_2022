@@ -2,7 +2,7 @@
     "USER_MAIN_DATA" :[
          {
      
-          "id": 12,
+          "id": "12",
           "userInfos": {
               "firstName": "Karl",
               "lastName": "Dovineau",
@@ -17,13 +17,13 @@
           }
       },
       {
-          "id": 18,
+          "id": "18",
           "userInfos": {
               "firstName": "Cecilia",
               "lastName": "Ratorez",
               "age": 34
           },
-          "score": 0.3,
+          "todayScore": 0.3,
           "keyData": {
               "calorieCount": 2500,
               "proteinCount": 90,
@@ -35,7 +35,7 @@
     
     "USER_ACTIVITY" : [
         {
-            "userId": 12,
+            "userId": "12",
             "sessions": [
                 {
                     "day": "2020-07-01",
@@ -75,7 +75,7 @@
             ]
         },
         {
-            "userId": 18,
+            "userId": "18",
             "sessions": [
                 {
                     "day": "2020-07-01",
@@ -119,7 +119,7 @@
     
     "USER_AVERAGE_SESSIONS" : [
     {
-        "userId": 12,
+        "userId": "12",
         "sessions": [
             {
                 "day": 1,
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "userId": 18,
+        "userId": "18",
         "sessions": [
             {
                 "day": 1,
@@ -189,7 +189,7 @@
     "USER_PERFORMANCE" : [
         {
      
-        "userId": 12,
+        "userId": "12",
         "kind" : [
             {"1": "cardio"},
             {"2": "energy"},
@@ -226,7 +226,7 @@
         ]
     },
     {
-        "userId": 18,
+        "userId": "18",
         "kind": [
             {"1": "cardio"},
             {"2": "energy"},

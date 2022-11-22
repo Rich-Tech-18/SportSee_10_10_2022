@@ -1,6 +1,15 @@
 import logo from '../../assets/logo.svg';
 import './Navbar.css';
 
+/**
+ * Component for showing the main menu of the website.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 function Navbar(){
     return(     
             <nav className="navContainer">

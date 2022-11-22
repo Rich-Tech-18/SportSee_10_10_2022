@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 import './index.css';
 import Header from './compenents/Header/Header';
 import Dashboard from './compenents/Dashboard/Dashboard';
@@ -11,7 +11,9 @@ root.render(
   <Router>
     <Header />
       <Routes>
+        <Route path="/" element={<Dashboard />}></Route>
         <Route path="/:idUser" element={<Dashboard />}></Route>
+        <Route path="/*" element={<Navigate to ="/"> </Navigate>}></Route>
     </Routes>
   </Router>
 );

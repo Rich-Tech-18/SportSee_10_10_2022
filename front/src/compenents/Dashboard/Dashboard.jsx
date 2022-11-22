@@ -9,21 +9,16 @@ import Aside from '../Aside/Aside';
 import './Dashboard.css';
 
 
+/**
+ * Component for showing the dashboard.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
 
 const Dashboard = () => {
-   
-    // const [user] = React.useState({});
-    // const getUserData = async (id) => {
-    //     const userData = await datas(id);
-    //     user(userData);
-    // }
-
-//      React.useEffect(() => {
-//     getUserData(18);
-// }, [18])
-// React.useEffect(() => {
-//     getUserData(id);
-// })
 
     return(
         <section className="containerDashboard">

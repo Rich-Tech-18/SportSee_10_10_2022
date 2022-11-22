@@ -1,9 +1,11 @@
 import './LegendBarCharts.css';
 
 /**
- * Component who show the Legends for the Barcharts components.
+ * Component for showing the Legend of the barcharts.
  *
  * @component
+ * 
+ * @return HTML element
  * 
  */
 

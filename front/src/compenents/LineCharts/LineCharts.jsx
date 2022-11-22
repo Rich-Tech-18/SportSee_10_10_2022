@@ -1,17 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import { useParams } from 'react-router';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { getAverageSessions } from '../../api/api';
-import {dataSort} from '../../datas/classesData';
+import PropTypes from "prop-types"
 import './LineCharts.css';
 
 
 /**
- * Component for showing the Radial Barcharts.
- *
- * @component
- * 
- */
+* A average sessions activity Line chart component.
+* @param {Object} data
+* @external Recharts library
+* @see https://recharts.org/en-US/api/LineChart
+* @returns A Line chart React Element.
+*/
 
 
 const LineCharts = (props) => {
@@ -20,19 +19,7 @@ const LineCharts = (props) => {
    * @type {Object} average - fetch the data from the api with no sort.
    * @type {Object} averageSort - sort the data in good format for the charts
    */
-      // const id = useParams();
-      // const [average, setAverage] = useState([]);
 
-
-      // useEffect(() => {
-      //   const getAverageSessionData = async (id) => {
-      //       const averageSessionsData = await getAverageSessions(id);
-      //       setAverage(averageSessionsData);
-      //   }
-      //   getAverageSessionData(id.idUser);
-      // }, [id.idUser])
-
-      // const averageSort = new dataSort(average);
 
 
     return (
@@ -60,6 +47,15 @@ const LineCharts = (props) => {
         </LineChart>
       </ResponsiveContainer>
     )
+}
+
+LineCharts.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+    day : PropTypes.string,
+    min : PropTypes.number,
+  })
+  )
 }
 
 export default LineCharts;

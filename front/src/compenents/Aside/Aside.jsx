@@ -5,6 +5,16 @@ import workout from '../../assets/itemWorkout.svg';
 import './Aside.css';
 
 
+
+/**
+ * Component for showing the the image on the side of the web page.
+ *
+ * @component
+ * 
+ * @return HTML element 
+ * 
+ */
+
 function Aside(){
     return(
         <aside className='asideContainer'>

@@ -5,6 +5,16 @@ import { dataSort } from '../../datas/classesData';
 import './ContainerLineCharts.css';
 
 
+
+/**
+ * Component for showing a container for the LineCharts in the Dashboard component.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 const ContainerLineCharts = () => {
     const idUser = useIdParamUrl();
     const dataUser = useData(idUser, getAverageSessions, dataSort);

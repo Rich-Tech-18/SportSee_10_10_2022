@@ -10,61 +10,22 @@ import { dataNutriments } from "../../datas/classesData";
 import "./ContainnerStatsNutriments.css";
 
 
+/**
+ * Component for showing a container for the Stats nutriments in the Dashboard component.
+ *
+ * @component
+ * 
+ * @return HTML element
+ * 
+ */
+
 const ContainnerStatsNutriments = () => {
     const idUser = useIdParamUrl();
     const dataCaloriesUser = useData(idUser, getCaloriesCount, dataNutriments);
     const dataProteinUser = useData(idUser, getProteinCount, dataNutriments);
     const dataCarbohydrateUSer = useData(idUser, getCarbohydrateCount, dataNutriments);
     const dataLipidUser = useData(idUser , getLipidCount, dataNutriments);
-    // const id = useParams();
-    // const [caloriesNumber, setCalories] = useState([]);
-    // const [proteinNumber, setProtein] = useState([]);
-    // const [carbohydrateNumber, setCarbohydrate] = useState([]);
-    // const [lipidNumber, setLipid] = useState([]);
-
-    // useEffect(() => {
-    //     const getCalories = async (id) => {
-    //         const getCaloriesData = await getCaloriesCount(id);
-    //         setCalories(getCaloriesData);
-    //     }
-    //     getCalories(id.idUser)
-        
-    // }, [id.idUser])
-
-    // useEffect(() => {
-    //     const getProtein = async (id) => {
-    //         const getProteinData = await getProteinCount(id);
-    //         setProtein(getProteinData);
-    //     }
-    //     getProtein(id.idUser)
-        
-    // }, [id.idUser])
-
-    // useEffect(() => {
-    //     const getCarbohydrate = async (id) => {
-    //         const getCarbohydrateData = await getCarbohydrateCount(id);
-    //         setCarbohydrate(getCarbohydrateData);
-    //     }
-    //     getCarbohydrate(id.idUser)
-        
-    // }, [id.idUser])
-
-    // useEffect(() => {
-    //     const getLipid = async (id) => {
-    //         const getLipidData = await getLipidCount(id);
-    //         setLipid(getLipidData);
-    //     }
-    //     getLipid(id.idUser)
-        
-    // }, [id.idUser])
-
-    // const calorieFormat = new getNutriments(caloriesNumber);
-    // const proteinFormat = new getNutriments(proteinNumber);
-    // const carbohydrateFormat = new getNutriments(carbohydrateNumber);
-    // const lipideFormat = new getNutriments(lipidNumber);
-
     
-
     return(
         <ul className="gridNutriments">
             <li><StatsNutriments image={calorie} type={dataCaloriesUser.getDataNutriments() > 1 ? "Calories" : "Calorie"} number={dataCaloriesUser.getDataNutriments() +"kCal"}/></li>
