@@ -6,7 +6,7 @@
 
 ### Step 2 : Download the project
 
-With the bash shell or Widows shell do the following command : git clone https://github.com/Rich-Tech-18/SportSee_10_10_2022
+With the bash shell or Widows shell do the following command : ```git clone https://github.com/Rich-Tech-18/SportSee_10_10_2022```
 
 ## Step 3 : Installing the backend
 
