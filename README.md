@@ -24,6 +24,6 @@ In the folder : sportsee do the following commands : npm install and npm run sta
 
 ### Tools used :
 
-Axios v1.1.2: [Link](https://axios-http.com/fr/docs/intro)
-PropTypes v15.8.1: [Link](https://en.reactjs.org/docs/typechecking-with-proptypes.html)
-Recharts v2.1.15: [Link](https://recharts.org/en-US/)
+* Axios v1.1.2: [Link](https://axios-http.com/fr/docs/intro)
+* PropTypes v15.8.1: [Link](https://en.reactjs.org/docs/typechecking-with-proptypes.html)
+* Recharts v2.1.15: [Link](https://recharts.org/en-US/)
