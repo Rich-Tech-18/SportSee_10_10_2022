@@ -27,7 +27,7 @@ const ContainnerStatsNutriments = () => {
     const dataLipidUser = useData(idUser , getLipidCount, dataNutriments);
     
     return(
-        <ul className="gridNutriments">
+        <ul className="gridNutriments container">
             <li><StatsNutriments image={calorie} type={dataCaloriesUser.getDataNutriments() > 1 ? "Calories" : "Calorie"} number={dataCaloriesUser.getDataNutriments() +"kCal"}/></li>
             <li><StatsNutriments image={protein} type={dataProteinUser.getDataNutriments() > 1 ? "Proteines" : "Proteine"} number={dataProteinUser.getDataNutriments() + "g"}/></li>
             <li><StatsNutriments image={carbohydrate} type={dataCarbohydrateUSer.getDataNutriments() > 1 ? "Glucides" : "Glucide"} number={dataCarbohydrateUSer.getDataNutriments() + "g"}/></li>

@@ -20,9 +20,10 @@ const HelloFirstName = () => {
     const nameUser = useData(idUser, getFirstName, user);
 
     return (
-        <div className="gridTitle">
+        <div className="gridTitle container">
             <h1>Bonjour <span className="colorName">{nameUser.getName()}</span></h1>
             <TextTitle />
+            <div id='errorMessage'></div>
         </div>
         )
 }

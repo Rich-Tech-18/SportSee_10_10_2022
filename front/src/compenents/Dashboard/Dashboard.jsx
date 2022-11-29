@@ -22,7 +22,7 @@ const Dashboard = () => {
 
     return(
         <section className="containerDashboard">
-            <Aside />
+            <Aside/>
             <HelloFirstName/>
             <ContainerBarChats />
             <ContainnerStatsNutriments />

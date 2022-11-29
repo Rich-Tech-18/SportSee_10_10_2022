@@ -28,3 +28,13 @@
 .logoSportSee{
     width: 4vw;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #E60000;
+}

@@ -24,7 +24,7 @@ export const useIdParamUrl = () => {
  * @param {string} apiGetFunction - the function who fetch the api
  * @param {string} classNameData - the class name who sort the data
  * 
- * @return {object} Return the number of nutriment in a string format
+ * @return {object} Return the array
  */
 
 export const useData = (id, apiGetFunction, classNameData) => {

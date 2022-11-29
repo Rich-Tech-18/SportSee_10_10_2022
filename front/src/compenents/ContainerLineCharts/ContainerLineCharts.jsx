@@ -20,7 +20,7 @@ const ContainerLineCharts = () => {
     const dataUser = useData(idUser, getAverageSessions, dataSort);
     
     return (
-        <div className="gridLineCharts">
+        <div className="gridLineCharts container">
             <p className="textLineChart">Durée moyenne des sessions</p>
             <LineCharts data={dataUser.lineCharts()}/>
         </div>

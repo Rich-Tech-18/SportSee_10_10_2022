@@ -1,0 +1,32 @@
+
+.navButton{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;  
+}
+
+button{
+    font-size: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1rem;
+    background-color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+button a{
+    text-decoration: none;
+}
+
+.alert{
+    background-color: #f44336;;
+}
+
+button:hover{
+    background-color: #008CBA;;
+}

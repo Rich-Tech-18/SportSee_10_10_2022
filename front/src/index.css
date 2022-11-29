@@ -16,3 +16,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.errorMessage{
+  grid-area: error;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-duration: 1s;
+  animation-name: errorBlink;
+  animation-iteration-count: infinite;
+  transition: none;
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+}
+
+@keyframes errorBlink {
+  0%   { opacity:1; }
+  40%   {opacity:0.5; }
+  100% { opacity:1; }
+}

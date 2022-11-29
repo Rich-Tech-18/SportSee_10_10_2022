@@ -18,7 +18,7 @@ const ContainerRadialBarCharts = () => {
     const idUser = useIdParamUrl();
     const dataUser = useData(idUser, getInfo, dataSort)
     return (
-        <div className="gridRadialCharts">
+        <div className="gridRadialCharts container">
             <p className="textScore">Score</p>
             <RadialBarCharts data={dataUser.radialBarCharts()} score={dataUser.radialBarCharts()[1]=== undefined ? 0 : dataUser.radialBarCharts()[0].score * 100}/>
             <p className="textPourcent">de votre objectif</p>

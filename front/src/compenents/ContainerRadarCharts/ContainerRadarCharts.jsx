@@ -19,7 +19,7 @@ const ContainerRadarCharts = () => {
     const dataUser = useData(idUser, getPerformance, dataSort);
 
     return (
-        <div className="gridRadarCharts">
+        <div className="gridRadarCharts container">
             <RadarCharts data={dataUser.radarCharts()}/>
         </div>
     )

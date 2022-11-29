@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import './index.css';
 import Header from './compenents/Header/Header';
 import Dashboard from './compenents/Dashboard/Dashboard';
+import Home from './compenents/Home/Home';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +12,7 @@ root.render(
   <Router>
     <Header />
       <Routes>
-        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/" element={<Home />}></Route>
         <Route path="/:idUser" element={<Dashboard />}></Route>
         <Route path="/*" element={<Navigate to ="/"> </Navigate>}></Route>
     </Routes>

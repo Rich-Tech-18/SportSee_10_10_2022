@@ -21,7 +21,7 @@ const ContainerBarChats = () => {
     const idUser = useIdParamUrl();
     const dataUser = useData(idUser, getActivity, dataSort);
     return (
-        <div className="gridBarCharts">
+        <div className="gridBarCharts container">
             <div className="paddingBarCharts"><LegendBarCharts /></div>
             <div className="paddingBarCharts"><BarCharts data={dataUser.barCharts()}/></div>
         </div>
