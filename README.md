@@ -20,14 +20,19 @@ with your shell, go the to folder front.
 
 followings the command : ```yarn install```
 
-In the folder : sportsee do the following commands : npm install and npm run start.
+
+## Step 5 : Project start-up
+
+### Launch the front-server :
+
+on the folder front,
+
+use the command : ```yarn start```
 
 the project start on port 2000 : [Link](http://localhost:2000/)
 
 for see the front with complete data, go to [Link](http://localhost:2000/18)
 or [Link](http://localhost:2000/12)
-
-## Step 5 : Project start-up
 
 ### Tools used :
 
